@@ -159,6 +159,13 @@ namespace Linked_List_Workshop
 
             return arr;
         }
+        
+        public void Clear()
+        {
+            this.head = null;
+            this.tail = null;
+            this.Count = 0;
+        }
 
         private void ValidateIfListIsEmpty()
         {
