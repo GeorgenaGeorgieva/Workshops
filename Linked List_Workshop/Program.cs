@@ -51,16 +51,22 @@ namespace Linked_List_Workshop
             Console.WriteLine((int)linkedList.RemoveTail() == 5);
             Console.WriteLine(linkedList.Count == 0);
 
-            try
-            {
-                Console.WriteLine(linkedList.Head);
-                Console.WriteLine(false);
-            }
-            catch (InvalidOperationException)
-            {
-                Console.WriteLine(true);
-            }
-            
+            linkedList.AddTail(5);
+            linkedList.AddTail(10);
+            linkedList.AddTail(5);
+            linkedList.AddTail(20);
+            linkedList.AddTail(5);
+
+            //5 <-> 10 <-> 5 <-> 20 <-> 5
+
+            linkedList.Remove(5);
+
+            //10 <-> 20
+
+            Console.WriteLine((int)linkedList.Head == 10);
+            Console.WriteLine((int)linkedList.Tail == 20);
+            Console.WriteLine(linkedList.Count == 2);
+
             linkedList.Clear();
             Console.WriteLine(linkedList.Count == 0);
         }
