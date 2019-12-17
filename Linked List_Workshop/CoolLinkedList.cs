@@ -128,6 +128,53 @@ namespace Linked_List_Workshop
             this.Count--; 
             return value;
         }
+        
+        public void Remove(object value)
+        {
+            var currentNode = this.head;
+
+            while (currentNode != null)
+            {
+                var nodeValue = currentNode.Value;
+
+                if (nodeValue.Equals(value))
+                {
+                    this.Count--;
+
+                    var prevNode = currentNode.Previous;
+                    var nextNode = currentNode.Next;
+
+                    if (prevNode != null)
+                    {
+                        prevNode.Next = nextNode;
+                    }
+
+                    if (nextNode != null)
+                    {
+                        nextNode.Previous = prevNode;
+                    }
+
+                    if (this.head == currentNode)
+                    {
+                        this.head = nextNode;
+                    }
+
+                    if (this.tail == currentNode)
+                    {
+                        this.tail = prevNode;
+                    }
+                }
+
+                currentNode = currentNode.Next;
+            }
+        }
+        
+        public void Clear()
+        {
+            this.head = null;
+            this.tail = null;
+            this.Count = 0;
+        }
 
         public void ForEach(Action<object> action, bool reverse = false)
         {
@@ -158,13 +205,6 @@ namespace Linked_List_Workshop
             }
 
             return arr;
-        }
-        
-        public void Clear()
-        {
-            this.head = null;
-            this.tail = null;
-            this.Count = 0;
         }
 
         private void ValidateIfListIsEmpty()
