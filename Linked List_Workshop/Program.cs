@@ -60,6 +60,9 @@ namespace Linked_List_Workshop
             {
                 Console.WriteLine(true);
             }
+            
+            linkedList.Clear();
+            Console.WriteLine(linkedList.Count == 0);
         }
     }
 }
