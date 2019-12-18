@@ -40,6 +40,17 @@
                 return this.arr[index];
             }
         }
+        
+        public void Add(object element)
+        {
+            if (this.Count == this.arr.Length)
+            {
+                this.Resize();
+            }
+
+            this.arr[Count] = element;
+            this.Count++;
+        }
 
         public object RemoveAt(int index)
         {
@@ -59,17 +70,6 @@
             this.arr[Count] = null;
 
             return obj;
-        }
-
-        public void Add(object element)
-        {
-            if (this.Count == this.arr.Length)
-            {
-                this.Resize();
-            }
-
-            this.arr[Count] = element;
-            this.Count++;
         }
 
         public bool Contains(object obj)
