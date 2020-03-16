@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace Linked_List
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    
     public class CoolStack
     {
         private List<object> values;
@@ -36,6 +36,7 @@ namespace Linked_List
             var lastIndex = this.values.Count - 1;
             var last = this.values[lastIndex];
             this.values.RemoveAt(lastIndex);
+            
             return last;
         }
 
