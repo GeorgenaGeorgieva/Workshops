@@ -1,4 +1,4 @@
-namespace Create_Custom_List
+namespace CreateCustomList
 {
     using System;
     
