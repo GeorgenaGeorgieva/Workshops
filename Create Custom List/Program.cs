@@ -1,7 +1,7 @@
-﻿using System;
-
 namespace Create_Custom_List
 {
+    using System;
+    
     class Program
     {
         static void Main(string[] args)
