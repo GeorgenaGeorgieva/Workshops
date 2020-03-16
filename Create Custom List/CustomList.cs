@@ -94,6 +94,7 @@
             {
                 throw new IndexOutOfRangeException("Invalid index!!!");
             }
+            
             object temp = this.arr[firstIndex];
             this.arr[firstIndex] = this.arr[secondIndex];
             this.arr[secondIndex] = temp;
