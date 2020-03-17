@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Linked_List
+namespace LinkedList
 {
+    using System;
+    using System.Collections.Generic;
+    
     public class Program
     {
        public static void Main()
